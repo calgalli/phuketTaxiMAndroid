@@ -1,0 +1,155 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+
+
+
+
+tools:context="com.example.cake.mqtttest.chatActivity"
+android:id="@+id/onTheWayMapLayout"
+android:windowSoftInputMode="adjustResize">
+
+<RelativeLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/linearLayout"
+    android:background="#003333"
+    android:layout_alignParentTop="true">
+
+    <com.example.cake.phukettaxim.MLRoundedImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/custommerImageView2"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:scaleType="centerCrop"/>
+
+</RelativeLayout>
+
+
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="60dp"
+    android:layout_marginBottom="40dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
+        android:background="#336666">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/driverImageView"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/driverName"
+                android:gravity="center_horizontal"
+                android:textColor="#cccccc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/licensePlateNumber"
+                android:gravity="center_horizontal"
+                android:textColor="#cccccc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/distance"
+                android:gravity="center_horizontal"
+                android:textColor="#cccccc" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/cancel"
+            android:onClick="onCancel"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/top_orange_button" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/onTheWayMap"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        class="com.google.android.gms.maps.MapFragment"
+        android:layout_marginBottom="133dp"
+        android:layout_marginTop="60dp" />
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:id="@+id/webView"
+
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/chatInput"
+        android:layout_alignParentBottom="true"
+        android:background="#338888"
+        android:gravity="center_vertical">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:id="@+id/chatText"
+        android:singleLine="true"
+        android:background="#FFFFFF"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="10dp" />
+
+        <Button
+            android:layout_width="76dp"
+            android:layout_height="36dp"
+            android:text="Send"
+            android:id="@+id/Send"
+            android:hint="Enter value"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="onSendChatMessage"
+            android:background="@drawable/top_orange_button" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

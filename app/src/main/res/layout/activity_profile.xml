@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cake.phukettaxim.profileActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#003333">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/backButton"
+            android:layout_gravity="center_vertical|left"
+            android:onClick="onClickBackProfile"
+            android:background="@drawable/top_orange_button" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Log out"
+            android:id="@+id/logoutButton"
+            android:layout_gravity="center_vertical|right"
+            android:onClick="onClickLogout"
+            android:background="@drawable/top_orange_button" />
+    </FrameLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/profile_list_view_custommer"
+        android:layout_marginTop="60dp" />
+</RelativeLayout>
